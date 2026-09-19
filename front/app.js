@@ -1,7 +1,7 @@
 async function loadCars() {
   const container = document.getElementById('cars');
   try {
-    const response = await fetch('/api/cars.php');
+    const response = await fetch('/cars.php');
     if (!response.ok) throw new Error('API error');
     const cars = await response.json();
     container.innerHTML = cars.map(car => `
